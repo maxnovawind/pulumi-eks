@@ -1,0 +1,47 @@
+config:
+  aws:region: eu-west-3
+  network:
+    name: "vpc-for-eks"
+    cidrBlock: "172.16.0.0/16"
+    subnets:
+      privateSubnets:
+        cidrMask: 20
+      publicSubnets:
+        cidrMask: 20
+      isolatedSubnets:
+        cidrMask: 28
+  cluster:
+    name: "cluster-eks"
+    nodeGrps:
+      - name: "on-demand"
+        capacityType: "ON_DEMAND"
+        instanceTypes:
+          - "t3.medium"
+        scaling:
+          maxSize: 3
+          desiredSize: 3
+          minSize: 3
+      - name: "spot"
+        capacityType: SPOT
+        instanceTypes:
+          - "t2.micro"
+        scaling:
+          maxSize: 3
+          minSize: 3
+          desiredSize: 3
+        taints:
+          - key: "spot"
+            effect: "NO_SCHEDULE"
+            value: "true"
+  database:
+    name: "rds-instance"
+    instanceType: "db.r5d.large"
+    port: 5432
+    enable: true
+    storageSize: 100
+    storageType: "io1"
+    iops: 1000
+    dbName: "db_starton"
+    dbUsername: "adminstarton"
+    engine: "postgres"
+    engineVersion: "13.7"
