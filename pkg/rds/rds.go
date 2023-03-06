@@ -1,7 +1,7 @@
 package rds
 
 import (
-	"github.com/maxnovawindunix/pulumi-eks/pkg/vpc"
+	"github.com/maxnovawind/pulumi-eks/pkg/vpc"
 	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"

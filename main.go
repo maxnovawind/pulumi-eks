@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/maxnovawindunix/pulumi-eks/pkg/cluster"
-	"github.com/maxnovawindunix/pulumi-eks/pkg/rds"
-	"github.com/maxnovawindunix/pulumi-eks/pkg/vpc"
+	"github.com/maxnovawind/pulumi-eks/pkg/cluster"
+	"github.com/maxnovawind/pulumi-eks/pkg/rds"
+	"github.com/maxnovawind/pulumi-eks/pkg/vpc"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )

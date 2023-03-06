@@ -1,4 +1,4 @@
-module github.com/maxnovawindunix/pulumi-eks
+module github.com/maxnovawind/pulumi-eks
 
 go 1.18
 
